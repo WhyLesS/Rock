@@ -17,7 +17,7 @@ namespace WindowsFormsApp7
         private int _hp;
 
         [DisplayName("ВСЕ РАВНО ХРЕНЬ"), DefaultValue(90)]
-        public int hp
+        public int HP
         {
             get => _hp;
             set
@@ -41,6 +41,7 @@ namespace WindowsFormsApp7
         }
 
         private int _iq;
+
         public int IQ
         {
             get => _iq;
@@ -58,7 +59,7 @@ namespace WindowsFormsApp7
 
         private int _food;
 
-        public int food
+        public int Food
         {
             get => _food;
             set

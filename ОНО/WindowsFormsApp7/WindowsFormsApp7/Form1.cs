@@ -45,9 +45,9 @@ namespace WindowsFormsApp7
             CopySundew.Size = new Size(110, 20);
             Controls.Add(CopySundew);
             //all1.obj = sundew; //Прикрепляем росянку к графическому объекту
-            sundew.dewGraphics = CopySundew; //Прикрепляем графический объект к росянке
-            nut.futGraphics = CopyNut;//тоже прикрепляем
-            sunflower.flowerGraphics = CopySunflower;
+            sundew.SundewGraphics = CopySundew; //Прикрепляем графический объект к росянке
+            nut.NutGraphics = CopyNut;//тоже прикрепляем
+            sunflower.FlowerGraphics = CopySunflower;
             human.HumanGraphics = CopyHuman;//yes
         }
 
@@ -318,7 +318,7 @@ namespace WindowsFormsApp7
                 human.life = false;
                 pictureBox4.Dispose();
                 label6.Dispose();
-                human.HumanGraphics.hp = 0;
+                human.HumanGraphics.HP = 0;
 
             }
 
@@ -327,7 +327,7 @@ namespace WindowsFormsApp7
                 pictureBox1.Dispose();
                 label2.Dispose();
                 sundew.life = false;
-                sundew.dewGraphics.HP = 0;
+                sundew.SundewGraphics.HP = 0;
             }
 
             if (nut.HP <= 0 || !nut.life)
@@ -336,7 +336,7 @@ namespace WindowsFormsApp7
                 label3.Dispose();
                 label5.Dispose();
                 nut.life = false;
-                nut.futGraphics.hp = 0;
+                nut.NutGraphics.hp = 0;
             }
 
             if (sunflower.HP <= 0 || !sunflower.life)
@@ -344,7 +344,7 @@ namespace WindowsFormsApp7
                 pictureBox3.Dispose();
                 label4.Dispose();
                 sunflower.life = false;
-                sunflower.flowerGraphics.hp = 0;
+                sunflower.FlowerGraphics.hp = 0;
             }
         }
     }

@@ -9,7 +9,7 @@ namespace WindowsFormsApp7
     class Plant : IPlant
     {
         private CSunflower _flowerGraphics;
-        public CSunflower flowerGraphics
+        public CSunflower FlowerGraphics//передают значения в графику(контрол)
         {
             get => _flowerGraphics;
             set
@@ -18,58 +18,62 @@ namespace WindowsFormsApp7
                 _flowerGraphics.hp = HP;
             }
         }
-        private CNut _futGraphics;
-        public CNut futGraphics
+
+        private CNut _nutGraphics;
+        public CNut NutGraphics
         {
-            get => _futGraphics;
+            get => _nutGraphics;
             set
             {
-                _futGraphics = value;
-                _futGraphics.hp = HP;
+                _nutGraphics = value;
+                _nutGraphics.hp = HP;
             }
         }
-        private CSundew _dewGraphics;
-		public CSundew dewGraphics
+
+        private CSundew _sundewGraphics;
+
+		public CSundew SundewGraphics
 		{
-			get => _dewGraphics;
+			get => _sundewGraphics;
 			set
             {
-				_dewGraphics = value;
-				_dewGraphics.HP = HP;
+				_sundewGraphics = value;
+				_sundewGraphics.HP = HP;
 			}
 		}
 
 		private int _hp;
+
         public int HP
 		{
 			get => _hp;
 			set
 			{
 				_hp = value;
-				if (dewGraphics != null)
-					dewGraphics.HP = value;
-                if (futGraphics != null)
-                    futGraphics.hp = value;
-                if (flowerGraphics != null)
-                    flowerGraphics.hp = value;
+				if (SundewGraphics != null)
+					SundewGraphics.HP = value;
+                if (NutGraphics != null)
+                    NutGraphics.hp = value;
+                if (FlowerGraphics != null)
+                    FlowerGraphics.hp = value;
             }
 		}
 
         public int execution = 100;
         public bool life = true;
-        public bool photo { get; set; }
+        public bool Photo { get; set; }
         public string s;
 
         //___________________________________________________________
 
-        public Plant (bool life, int hp, bool photo)
+        public Plant (bool life, int HP, bool photo)
         {
             this.life = life;
-            this.HP = hp;
-            this.photo = photo;
+            this.HP = HP;
+            this.Photo = photo;
         }
 
-        public string AreLife()
+        public string AreLife()//на жзнь проверяет метод этот
         {
             if (life && HP > 0)
             {
@@ -83,9 +87,9 @@ namespace WindowsFormsApp7
             }
         }
 
-        public string GetPhotoEating(Sun sun)
+        public string GetPhotoEating(Sun sun)//просто добавляет хп если день
         {
-            if (sun.light && photo)
+            if (sun.light && Photo)
             {
                 HP += (int)(execution * 0.1);
                 s = "наслаждаемся солнышком (*_*)\n";

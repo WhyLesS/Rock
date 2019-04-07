@@ -21,9 +21,9 @@ namespace WindowsFormsApp7
             set
             {
                 _humanGraphics = value;
-                _humanGraphics.hp = HP;
+                _humanGraphics.HP = HP;
                 _humanGraphics.IQ = IQ;
-                _humanGraphics.food = Food;
+                _humanGraphics.Food = Food;
             }
         }
 
@@ -49,7 +49,7 @@ namespace WindowsFormsApp7
             {
                 _hp = value;
                 if (HumanGraphics != null)
-                    HumanGraphics.hp = value;
+                    HumanGraphics.HP = value;
             }
         }
 
@@ -62,7 +62,7 @@ namespace WindowsFormsApp7
             {
                 _food = value;
                 if (HumanGraphics != null)
-                    HumanGraphics.food = value;
+                    HumanGraphics.Food = value;
             }
         }
 

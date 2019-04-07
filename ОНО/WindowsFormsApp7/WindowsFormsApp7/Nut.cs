@@ -15,8 +15,8 @@ namespace WindowsFormsApp7
             set
             {
                 _defend = value;
-                if (futGraphics != null)
-                    futGraphics.defend = defend;
+                if (NutGraphics != null)
+                    NutGraphics.defend = defend;
             }
         }
         public Nut(bool life, int hp, bool photo, int defend)

@@ -11,7 +11,7 @@ namespace WindowsFormsApp7
         public int destroy { get; set; } //пусть пока что будет неиспользованной переменной
         public string s;
 
-        public string KillAll(Human human, Sundew sundew, Sunflower sunflower, Nut nut) //vot
+        public string KillAll(Human human, Sundew sundew, Sunflower sunflower, Nut nut) //убивает всех, но не добавлен в игру
         {
             human.life = false;
             sundew.life = false;

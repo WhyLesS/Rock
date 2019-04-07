@@ -18,9 +18,9 @@ namespace WindowsFormsApp7
             this.defend = defend;
         }
 
-        public string GetPlotFromHuman(Human human)//бъем челика
+        public string GetPlotFromHuman(Human human)//наносим урон челику и добавляем урон себе
         {
-            human.HP -= (int)(execution * 0.3);
+            human.HP -= (int)((execution + damage) * 0.15);
             s = "этот человек...\n" + human.MeLife();
             damage++;
             HP += (int)(execution * 0.34);
